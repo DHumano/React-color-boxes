@@ -7,12 +7,6 @@ class BoxContainer extends Component {
         numBoxes: 16,
         allColors: ["purple", "magenta", "pink", "red"]
     }
-    constructor(props) {
-        super(props);
-        this.state = {
-            box: 2
-        }
-    }
 
     render() {
         const boxes = Array.from({ length: this.props.numBoxes }).map((e, i) =>
