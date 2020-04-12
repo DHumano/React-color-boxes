@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Box from './Box';
 import './boxContainer.css';
+import { choice } from './helpers';
 
 class BoxContainer extends Component {
     static defaultProps = {
@@ -15,15 +16,50 @@ class BoxContainer extends Component {
             '#7B1FA2',
             '#512DA8',
             '#303F9F',
-            '#E91E63',
-            '#F06292',
-            '#C2185B'
+            '#3F51B5',
+            '#7986CB',
+            '#673AB7',
+            '#C2185B',
+            '#7986CB',
+            '#C2185B',
+            '#BA68C8'
         ]
+    }
+    constructor(props) {
+        super(props);
+        this.state = { colorAndBox: [] };
+        this.changeColor = this.changeColor.bind(this);
+    }
+
+    componentDidMount() {
+        this.crearObjeto();
+    }
+
+    crearObjeto() {
+        const obj = Array.from({ length: this.props.numBoxes }).map((e, i) => {
+            return { color: choice(this.props.allColors), id: i };
+        });
+        this.setState({ colorAndBox: obj });
+    }
+
+    changeColor(color, idx) {
+        const newState = this.state.colorAndBox.map((elm) => {
+            if (elm.id === idx) {
+                return { ...elm, color: choice(this.props.allColors, color) }
+            }
+            return elm;
+        });
+        this.setState({ colorAndBox: newState });
     }
 
     render() {
-        const boxes = Array.from({ length: this.props.numBoxes }).map((e, i) =>
-            <Box colors={this.props.allColors} key={i} />
+        const boxes = this.state.colorAndBox.map((e, i) =>
+            <Box
+                color={e.color}
+                key={i}
+                index={i}
+                changeColor={this.changeColor}
+            />
         );
 
         return (
