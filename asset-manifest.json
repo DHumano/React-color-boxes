@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/React-color-boxes/static/css/main.c237722a.chunk.css",
+    "main.js": "/React-color-boxes/static/js/main.b5482b29.chunk.js",
+    "main.js.map": "/React-color-boxes/static/js/main.b5482b29.chunk.js.map",
+    "runtime-main.js": "/React-color-boxes/static/js/runtime-main.6b07da0d.js",
+    "runtime-main.js.map": "/React-color-boxes/static/js/runtime-main.6b07da0d.js.map",
+    "static/js/2.d374d1e7.chunk.js": "/React-color-boxes/static/js/2.d374d1e7.chunk.js",
+    "static/js/2.d374d1e7.chunk.js.map": "/React-color-boxes/static/js/2.d374d1e7.chunk.js.map",
+    "index.html": "/React-color-boxes/index.html",
+    "precache-manifest.e5df78378e655244c527b353499af569.js": "/React-color-boxes/precache-manifest.e5df78378e655244c527b353499af569.js",
+    "service-worker.js": "/React-color-boxes/service-worker.js",
+    "static/css/main.c237722a.chunk.css.map": "/React-color-boxes/static/css/main.c237722a.chunk.css.map",
+    "static/js/2.d374d1e7.chunk.js.LICENSE.txt": "/React-color-boxes/static/js/2.d374d1e7.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6b07da0d.js",
+    "static/js/2.d374d1e7.chunk.js",
+    "static/css/main.c237722a.chunk.css",
+    "static/js/main.b5482b29.chunk.js"
+  ]
+}
